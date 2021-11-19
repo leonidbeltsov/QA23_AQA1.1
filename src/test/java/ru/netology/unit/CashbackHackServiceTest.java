@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class CashbackHackServiceTest {
 
@@ -38,9 +37,9 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-//        assertEquals(actual, expected);
+        assertEquals(actual, expected);
 // Чтобы все тесты проходили и CI не падал, мы применим тут другой assert...
-        assertTrue(actual != expected);
+//        assertTrue(actual != expected);
     }
 
     @org.junit.Test
@@ -82,9 +81,9 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-//        assertEquals(actual, expected);
+        Assertions.assertEquals(actual, expected);
 // Чтобы все тесты проходили и CI не падал, мы применим тут другой assert...
-        Assertions.assertTrue(actual != expected);
+//        Assertions.assertTrue(actual != expected);
     }
 
     @Test
